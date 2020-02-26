@@ -47,19 +47,22 @@ h1, h2, h3, h4 {
 }
 /*左边按钮组合*/
 .button-panel { 
-	width: 100px;
+	width: 100%;
 	margin: 30px auto;
 }
 /*左边单个按钮*/
 .button-nav {
-	width: 100px;
+	width: 100%;
 	font-size: 18px;
 	font-family: 微软雅黑;
 	background-color: pink;
-	border: 1.5px solid black;
+	border: 0;
 	font-weight: bold;
 	line-height: 40px;
 	/*font-style: bold;*/
+}
+.button-nav:hover {
+	background-color: skyblue;
 }
 /*右侧蓝色区域*/
 .right {
@@ -82,7 +85,7 @@ h1, h2, h3, h4 {
 	/*clear: both;*/
 	padding: 5;
 }
-#pie {
+#chart1 {
 	margin: 0;
 	padding: 0;
 	width: 100%;

@@ -1,26 +1,18 @@
 
-var dom = document.getElementById("pie");
+var dom = document.getElementById("chart1");
 var myChart = echarts.init(dom);
 
 myChart.setOption({
-    series: [{
+    xAxis: {
+        data: ['1-14', '1-15', '1-16', '1-17', '1-18', '1-19', '1-20', '1-21', '1-22'],
+    },
+    yAxis: {},
+    series: {
         name: 'Name',
-        type: 'pie',
-        radius: '90%',
-        data: [{
-            value: 235,
-            name: 'A'
-        }, {
-            value: 274,
-            name: 'B'
-        }, {
-            value: 310,
-            name: 'C'
-        }, {
-            value: 335,
-            name: 'D'
-        }]
-    }]
+        type: 'line',
+        smooth: true,
+        data: [1, 3, 8, 14, 25, 37, 48, 62, 88]
+    }
 });
 
 let china = document.getElementById('china');
@@ -31,33 +23,25 @@ let shandong = document.getElementById('shandong');
 let guangdong = document.getElementById('guangdong');
 let regionTitle = document.getElementById('regionTitle');
 // 全国
-china.onclick = function() {
+china.onmouseover = function() {
     regionTitle.textContent = '全国疫情数据';
-myChart.setOption({
-    series: [{
-        name: 'Name',
-        type: 'pie',
-        radius: '90%',
-        data: [{
-            value: 235,
-            name: 'A'
-        }, {
-            value: 274,
-            name: 'B'
-        }, {
-            value: 310,
-            name: 'C'
-        }, {
-            value: 335,
-            name: 'D'
-        }]
-    }]
-});
+    myChart.setOption({
+        xAxis: {
+            data: ['1-14', '1-15', '1-16', '1-17', '1-18', '1-19', '1-20', '1-21', '1-22'],
+        },
+        yAxis: {},
+        series: {
+            name: 'Name',
+            type: 'line',
+            smooth: true,
+            data: [1, 3, 8, 14, 25, 37, 48, 62, 88]
+        }
+    });
 
 
 }
 // 河南
-henan.onclick = function() {
+henan.onmouseover = function() {
     regionTitle.textContent = '河南疫情数据';
 myChart.setOption({
     series: [{
@@ -83,25 +67,25 @@ myChart.setOption({
 
 }
 // 河北
-hebei.onclick = function() {
+hebei.onmouseover = function() {
     regionTitle.textContent = '河北疫情数据';
 
 
 }
 // 浙江
-zhejiang.onclick = function() {
+zhejiang.onmouseover = function() {
     regionTitle.textContent = '浙江疫情数据';
 }
 
 
 // 山东
-shandong.onclick = function() {
+shandong.onmouseover = function() {
     regionTitle.textContent = '山东疫情数据';
 }
 
 
 // 广东
-guangdong.onclick = function() {
+guangdong.onmouseover = function() {
     regionTitle.textContent = '广东疫情数据';
 }
 
