@@ -7,53 +7,73 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>疫情数据</title>
-        <link rel="stylesheet" href="styles/style.css">
-        <script src="https://cdn.jsdelivr.net/npm/echarts@4.6.0/dist/echarts.common.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <title>疫情数据</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.6.0/dist/echarts.common.js"></script>
+    <!-- <script src="scripts/main.js"></script> -->
+  </head>
 
 
-    <body>
-        <!-- 主容器：所有内容都在其中，网页尺寸由其决定 -->
-        <div class="container">
-                        
-                <!-- 这个是最上一栏横幅         -->
-                <div class="header">
-                    <h2>疫情数据</h2>
-                </div>
-                <!-- 这个是网页的主要内容 包括左右两部分 -->
-                <div class="content">
-                    <!-- 左部导航栏 -->
-                    <div class="left">
-                        <!-- 按钮面板整体：选择地区 -->
-                        <div class="button-panel">
-                            <button id="china" class="button-nav">全国</button>
-                            <button id="hebei" class="button-nav">河北</button>
-                            <button id="henan" class="button-nav">河南</button>
-                            <button id="zhejiang" class="button-nav">浙江</button>
-                            <button id="shandong" class="button-nav">山东</button>
-                            <button id="guangdong" class="button-nav">广东</button>
-                        </div>
-                    </div>
-                    <!-- 右边的图表等内容👇-------------------- -->
-                    <div class="right">
-                        <br>
-                        <h2 id="regionTitle">全国疫情数据</h2>
-                        <p>Here is a example graph👇</p>
-                        <div id="chart1"></div>
-                    </div>
-                    <!-- 右侧主窗口👆-------------------------- -->
-                </div>
-                <!-- 底部横幅 -->
-                <div class="footer">
-                    <h4>Copyright@wsmzjzz</h4>
-                </div>
-            
+  <body>
+    <!-- 主容器：所有内容都在其中，网页尺寸由其决定 -->
+    <div class="container">
+                    
+      <!-- 这个是最上一栏横幅         -->
+      <div class="header">
+          <h2>疫情数据</h2>
+      </div>
+      <!-- 这个是网页的主要内容 包括左右两部分 -->
+      <div class="content">
+        <!-- 左部导航栏 -->
+        <div class="left">
+          <!-- 按钮面板整体：选择地区 -->
+          <div class="button-panel">
+            <button class="button-nav" onmouseover="openRegion(event, 'china')">全国</button>
+            <button class="button-nav" onmouseover="openRegion(event, 'hubei')">湖北</button>
+            <button class="button-nav" onmouseover="openRegion(event, 'henan')">河南</button>
+            <button class="button-nav" onmouseover="openRegion(event, 'zhejiang')">浙江</button>
+            <button class="button-nav" onmouseover="openRegion(event, 'shandong')">山东</button>
+            <button class="button-nav" onmouseover="openRegion(event, 'guangdong')">广东</button>
+          </div>
         </div>
-
-        <!-- 网页的自建脚本 -->
-        <script src="scripts/main.js"></script>
-    </body>
+        <!-- 右边的图表等内容👇-------------------- -->
+        <div id="china" class="right">
+            <br>
+            <h2 id="regionTitle">全国疫情数据</h2>
+            <!-- <p>Here is a example graph👇</p> -->
+            <div id="chart1"></div>
+        </div>
+        <div id="hubei" class="right">
+            <br>
+            <h2>hubei</h2>
+            <div id='hubei1'></div>
+            <p>hihihi</p>
+        </div>
+        <div id="henan" class="right">
+            <h2>HeNan</h2>
+        </div>
+        <div id="zhejiang" class="right">
+            <h2>zhejiang</h2>
+        </div>
+        <div id="shandong" class="right">
+            <h2>shandong</h2>
+        </div>
+        <div id="guangdong" class="right">
+            <h2>guangdong</h2>
+        </div>
+      </div>
+      <!-- 右侧主窗口👆-------------------------- -->
+      <!-- 底部横幅 -->
+      <div class="footer">
+          <h4>Copyright@wsmzjzz</h4>
+      </div>
+  
+    </div>
+   
+    <!-- 网页的自建脚本 -->
+    <script src="scripts/hubei.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>

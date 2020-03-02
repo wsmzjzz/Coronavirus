@@ -64,6 +64,9 @@ h1, h2, h3, h4 {
 .button-nav:hover {
 	background-color: skyblue;
 }
+.button-nav.active {
+	background-color: skyblue;	
+}
 /*右侧蓝色区域*/
 .right {
 	width: 500px;
