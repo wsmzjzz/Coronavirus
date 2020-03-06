@@ -19,70 +19,79 @@
 
 
 <body>
-  <!-- 主容器：所有内容都在其中，网页尺寸由其决定 -->
-  <div class="container">
+  <!-- 这个是最上一栏横幅         -->
+  <header>
+    <br>
+    <h2>疫情数据</h2>
+    <p><time pubdate datetime="2020-03-06"></time></p>
+    <p id="subtitle">武汉加油💪中国加油</p>
+  </header>
+  <!-- 左部导航栏 -->
+  <nav>
+    <br>
+    <button class="button-nav" onmouseover="openRegion(event, 'china')">全国</button>
+    <button class="button-nav" onmouseover="openRegion(event, 'hubei')">湖北</button>
+    <button class="button-nav" onmouseover="openRegion(event, 'henan')">河南</button>
+    <button class="button-nav" onmouseover="openRegion(event, 'zhejiang')">浙江</button>
+    <button class="button-nav" onmouseover="openRegion(event, 'shandong')">山东</button>
+    <button class="button-nav" onmouseover="openRegion(event, 'guangdong')">广东</button>
+  </nav>
+  <!-- 右边的图表等内容👇-------------------- -->
+  <article id="china">
+    <br>
+    <h2 id="regionTitle">全国疫情数据</h2>
+    <div id="chart1"></div>
+    <!-- <p>Here is a example graph👇</p> -->
+  </article>
+  <!-- 湖北 -->
+  <article id="hubei">
+    <br>
+    <h2>湖北疫情数据</h2>
+    <div id='hubei1' style="width: 500px; height: 280px;"></div>
+    <div id='hubei2' style="width: 500px; height: 250px;"></div>
+    <div id='hubei3' style="width: 500px; height: 250px;"></div>
+  </article>
+  <!-- 河南 -->
+  <article id="henan">
+    <br>
+    <h2>河南疫情数据</h2>
+    <div id='henan1' style="width: 500px; height: 280px;"></div>
+    <div id='henan2' style="width: 500px; height: 250px;"></div>
+    <div id='henan3' style="width: 500px; height: 250px;"></div>
+  </article>
+  <!-- 浙江 -->
+  <article id="zhejiang">
+    <br>
+    <h2>浙江疫情数据</h2>
+    <div id='zhejiang1' style="width: 500px; height: 280px;"></div>
+    <div id='zhejiang2' style="width: 500px; height: 250px;"></div>
+    <div id='zhejiang3' style="width: 500px; height: 250px;"></div>
+  </article>
+  <!-- 山东 -->
+  <article id="shandong">
+    <br>
+    <h2>山东疫情数据</h2>
+    <div id='shandong1' style="width: 500px; height: 280px;"></div>
+    <div id='shandong2' style="width: 500px; height: 250px;"></div>
+    <div id='shandong3' style="width: 500px; height: 250px;"></div>
+  </article>
+  <!-- 广东 -->
+  <article id="guangdong">
+    <br>
+    <h2>广东疫情数据</h2>
+    <div id='guangdong1' style="width: 500px; height: 280px;"></div>
+    <div id='guangdong2' style="width: 500px; height: 250px;"></div>
+    <div id='guangdong3' style="width: 500px; height: 250px;"></div>
+  </article>
+  
+  <!-- 右侧主窗口👆-------------------------- -->
+  <!-- 底部横幅 -->
+  <footer>
+    <p>Copyright@wsmzjzz</p>
+    <p>Mar-6-2020</p>
+    <!-- <p><time pubdate datetime="2020-03-06"></time></p> -->
+  </footer>
 
-    <!-- 这个是最上一栏横幅         -->
-    <div class="header">
-      <h2>疫情数据</h2>
-    </div>
-    <!-- 这个是网页的主要内容 包括左右两部分 -->
-    <div class="content">
-      <!-- 左部导航栏 -->
-      <div class="left">
-        <!-- 按钮面板整体：选择地区 -->
-        <div class="button-panel">
-          <button class="button-nav" onmouseover="openRegion(event, 'china')">全国</button>
-          <button class="button-nav" onmouseover="openRegion(event, 'hubei')">湖北</button>
-          <button class="button-nav" onmouseover="openRegion(event, 'henan')">河南</button>
-          <button class="button-nav" onmouseover="openRegion(event, 'zhejiang')">浙江</button>
-          <button class="button-nav" onmouseover="openRegion(event, 'shandong')">山东</button>
-          <button class="button-nav" onmouseover="openRegion(event, 'guangdong')">广东</button>
-        </div>
-      </div>
-      <!-- 右边的图表等内容👇-------------------- -->
-      <div id="china" class="right">
-        <br>
-        <h2 id="regionTitle">全国疫情数据</h2>
-        <div id="chart1"></div>
-        <!-- <p>Here is a example graph👇</p> -->
-      </div>
-      <!-- 湖北 -->
-      <div id="hubei" class="right">
-        <br>
-        <h2>湖北疫情数据</h2>
-        <div id='hubei1' style="width: 500px; height: 280px;"></div>
-        <div id='hubei2' style="width: 500px; height: 250px;"></div>
-        <div id='hubei3' style="width: 500px; height: 250px;"></div>
-      </div>
-      <!-- 河南 -->
-      <div id="henan" class="right">
-        <br>
-        <h2>河南疫情数据</h2>
-      </div>
-      <!-- 浙江 -->
-      <div id="zhejiang" class="right">
-        <br>
-        <h2>浙江疫情数据</h2>
-      </div>
-      <!-- 山东 -->
-      <div id="shandong" class="right">
-        <br>
-        <h2>山东疫情数据</h2>
-      </div>
-      <!-- 广东 -->
-      <div id="guangdong" class="right">
-        <br>
-        <h2>广东疫情数据</h2>
-      </div>
-    </div>
-    <!-- 右侧主窗口👆-------------------------- -->
-    <!-- 底部横幅 -->
-    <div class="footer">
-      <h4>Copyright@wsmzjzz</h4>
-    </div>
-
-  </div>
 
   <!-- 网页的自建脚本 -->
   <script src="scripts/china.js"></script>

@@ -1,20 +1,20 @@
 "use strict";
 
-fetch('./data/hubei.json')
+fetch('./data/henan.json')
     .then(function (resp) {
         return resp.json();
     })
-    .then(function (hubeiData) {
-        // console.log(hubeiData);
+    .then(function (henanData) {
+        // console.log(henanData);
 
-        var hubei1 = echarts.init(document.getElementById('hubei1'));
-        hubei1.setOption({
+        var henan1 = echarts.init(document.getElementById('henan1'));
+        henan1.setOption({
             title: {
                 text: '累计数字',
                 top: 20,
             },
             dataset: {
-                source: hubeiData,
+                source: henanData,
             },
             // title: '湖北',
             legend: {
@@ -32,7 +32,7 @@ fetch('./data/hubei.json')
                 // axisTick: {
                 //     alignWithLabel: true
                 // },
-                // data: hubeiData.map(function (item) {return item[5];}),
+                // data: henanData.map(function (item) {return item[5];}),
             },
             yAxis: {
                 scale: true,
@@ -92,14 +92,14 @@ fetch('./data/hubei.json')
 
         });
 
-        var hubei2 = echarts.init(document.getElementById('hubei2'));
-        hubei2.setOption({
+        var henan2 = echarts.init(document.getElementById('henan2'));
+        henan2.setOption({
             title: {
                 text: '新增数字',
                 top: 20,
             },
             dataset: {
-                source: hubeiData,
+                source: henanData,
             },
             // title: '湖北',
             legend: {
@@ -154,14 +154,14 @@ fetch('./data/hubei.json')
 
         });
 
-        var hubei3 = echarts.init(document.getElementById('hubei3'));
-        hubei3.setOption({
+        var henan3 = echarts.init(document.getElementById('henan3'));
+        henan3.setOption({
             title: {
                 text: '治愈/死亡率',
                 top: 20,
             },
             dataset: {
-                source: hubeiData,
+                source: henanData,
             },
             // title: '湖北',
             legend: {
